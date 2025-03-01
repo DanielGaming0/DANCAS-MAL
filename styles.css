@@ -35,7 +35,7 @@ body {
 
 /* Header */
 .header {
-    position: fixed; /* Fixa a barra de navegação no topo */
+    position: sticky; /* Alterado de fixed para sticky */
     top: 0;
     width: 100%;
     background: rgba(42, 42, 42, 0.9); /* Fundo semi-transparente */
