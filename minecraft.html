@@ -15,9 +15,8 @@
         <div class="logo">
             <span class="highlight">N</span>yx Ferion Store
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar jogos..." id="search-input">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
+        <div class="search-icon">
+            <a href="pesquisar-jogos.html"><i class="fas fa-search"></i></a>
         </div>
     </header>
 
@@ -88,16 +87,6 @@ Minecraft é um dos jogos mais populares da história e se destaca por sua liber
         AOS.init({
             duration: 1000,
             once: true
-        });
-
-        // Search functionality
-        const searchBtn = document.getElementById('search-btn');
-        const searchInput = document.getElementById('search-input');
-
-        searchBtn.addEventListener('click', () => {
-            const query = searchInput.value;
-            alert(`Você pesquisou por: ${query}`);
-            // Aqui você pode adicionar a lógica de pesquisa
         });
     </script>
 </body>
