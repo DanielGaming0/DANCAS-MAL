@@ -10,7 +10,10 @@
 <body>
     <div class="container">
         <!-- Barra de pesquisa -->
-        <input type="text" id="searchBar" placeholder="Pesquisar jogo..." oninput="filterGames()">
+        <div class="search-bar">
+            <input type="text" id="searchBar" placeholder="Pesquisar jogo...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
         
         <!-- Lista de jogos -->
         <div class="games-grid" id="gamesList">
@@ -57,6 +60,27 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        // Função de filtragem de jogos
+        function filterGames() {
+            const searchQuery = document.getElementById('searchBar').value.toLowerCase();
+            const games = document.querySelectorAll('.game-card');
+
+            games.forEach(game => {
+                const gameName = game.querySelector('span').textContent.toLowerCase();
+                if (gameName.includes(searchQuery)) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        }
+
+        // Adicionar evento de clique ao botão de pesquisa
+        document.getElementById('search-btn').addEventListener('click', filterGames);
+
+        // Adicionar evento de input à barra de pesquisa
+        document.getElementById('searchBar').addEventListener('input', filterGames);
+    </script>
 </body>
 </html>
