@@ -337,53 +337,47 @@ body {
     position: relative;
 }
 
-.games-container {
+/* Estilos específicos para a grade de jogos */
+.games-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Cria uma grade com colunas de 100px */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 10px; /* Espaçamento interno */
+    justify-content: center; /* Centraliza os itens na grade */
 }
 
 .game-card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100px; /* Largura fixa */
+    height: 100px; /* Altura fixa */
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir o card */
+    background-position: center; /* Centraliza a imagem de fundo */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transição suave ao interagir */
 }
 
+.game-card i {
+    font-size: 24px; /* Tamanho do ícone */
+    color: var(--white); /* Cor do ícone */
+    margin-bottom: 5px; /* Espaçamento abaixo do ícone */
+}
+
+.game-card span {
+    font-size: 12px; /* Tamanho do texto */
+    color: var(--white); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    padding: 0 5px; /* Espaçamento interno */
+    word-wrap: break-word; /* Quebra de linha para textos longos */
+}
+
+/* Efeito de hover para interatividade */
 .game-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow);
-}
-
-.game-card img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.game-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.game-card p {
-    color: var(--light-text);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.game-card .btn {
-    width: 100%;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
 }
 
 /* Footer */
