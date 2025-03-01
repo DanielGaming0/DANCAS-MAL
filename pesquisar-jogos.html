@@ -8,57 +8,73 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Barra de pesquisa -->
+
+    <header class="header">
+        <span class="logo">Nyx <span class="highlight">Ferion</span></span>
         <div class="search-bar">
             <input type="text" id="searchBar" placeholder="Pesquisar jogo...">
             <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
-        
-        <!-- Lista de jogos -->
-        <div class="games-grid" id="gamesList">
-            <div class="game-card" style="background-image: url('assets/game1.jpg');" onclick="openTab('minecraft')">
+    </header>
+
+    <section class="games">
+        <div class="section-title">
+            <h2>Jogos Disponíveis</h2>
+            <div class="title-bar"></div>
+        </div>
+
+        <div class="games-container" id="gamesList">
+            <div class="game-card" style="background-image: url('assets/game1.jpg');">
                 <i class="fas fa-gamepad"></i>
-                <span>The Legend of Zelda: Minecraft</span>
+                <span>The Legend of Zelda: Breath of the Wild</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo2.jpg');" onclick="openTab('ABAJOGO2')">
+            <div class="game-card" style="background-image: url('jogos/jogo2.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Super Mario Odyssey</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo3.jpg');" onclick="openTab('ABAJOGO3')">
+            <div class="game-card" style="background-image: url('jogos/jogo3.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Red Dead Redemption 2</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo4.jpg');" onclick="openTab('ABAJOGO4')">
+            <div class="game-card" style="background-image: url('jogos/jogo4.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Cyberpunk 2077</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo5.jpg');" onclick="openTab('ABAJOGO5')">
+            <div class="game-card" style="background-image: url('jogos/jogo5.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>The Witcher 3: Wild Hunt</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo6.jpg');" onclick="openTab('ABAJOGO6')">
+            <div class="game-card" style="background-image: url('jogos/jogo6.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Dark Souls III</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo7.jpg');" onclick="openTab('ABAJOGO7')">
+            <div class="game-card" style="background-image: url('jogos/jogo7.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Horizon Zero Dawn</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo8.jpg');" onclick="openTab('ABAJOGO8')">
+            <div class="game-card" style="background-image: url('jogos/jogo8.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>God of War</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo9.jpg');" onclick="openTab('ABAJOGO9')">
+            <div class="game-card" style="background-image: url('jogos/jogo9.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Final Fantasy VII Remake</span>
             </div>
-            <div class="game-card" style="background-image: url('jogos/jogo10.jpg');" onclick="openTab('ABAJOGO10')">
+            <div class="game-card" style="background-image: url('jogos/jogo10.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>Assassin's Creed Valhalla</span>
             </div>
         </div>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NyxFerion. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 
     <script>
         // Função de filtragem de jogos
@@ -76,16 +92,12 @@
             });
         }
 
-        // Função para abrir uma nova aba
-        function openTab(tabName) {
-            window.open('', tabName);
-        }
-
         // Adicionar evento de clique ao botão de pesquisa
         document.getElementById('search-btn').addEventListener('click', filterGames);
 
         // Adicionar evento de input à barra de pesquisa
         document.getElementById('searchBar').addEventListener('input', filterGames);
     </script>
+
 </body>
 </html>
