@@ -45,15 +45,15 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    text-align: center;
+    text-align: center; /* Centraliza o conteúdo */
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
-    display: inline-block;
-    margin-right: 1rem;
+    display: inline-block; /* Faz o logo ficar em linha */
+    margin-right: 1rem; /* Espaço entre o logo e a barra de pesquisa */
 }
 
 .logo .highlight {
@@ -61,8 +61,8 @@ body {
 }
 
 .search-bar {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; /* Faz a barra de pesquisa ficar em linha */
+    vertical-align: middle; /* Alinha verticalmente com o logo */
 }
 
 .search-bar input {
