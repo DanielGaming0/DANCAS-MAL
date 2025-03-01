@@ -35,9 +35,6 @@ body {
 
 /* Header */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 1rem 2rem;
     background: rgba(42, 42, 42, 0.9);
     backdrop-filter: blur(10px);
@@ -48,14 +45,15 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
+    text-align: center; /* Centraliza o conteúdo */
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--white);
-    display: flex;
-    align-items: center;
+    display: inline-block; /* Faz o logo ficar em linha */
+    margin-right: 1rem; /* Espaço entre o logo e a barra de pesquisa */
 }
 
 .logo .highlight {
@@ -63,9 +61,8 @@ body {
 }
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    display: inline-block; /* Faz a barra de pesquisa ficar em linha */
+    vertical-align: middle; /* Alinha verticalmente com o logo */
 }
 
 .search-bar input {
