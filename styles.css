@@ -3,24 +3,24 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
+    background-color: #1a1a1a; /* Fundo mais escuro */
     color: #f0f0f0;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
     font-family: 'Impact', sans-serif;
-    color: #ff6347; /* Tomato color for headings */
+    color: #8a2be2; /* Roxo para títulos */
 }
 
 a {
-    color: #ff6347;
+    color: #8a2be2;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #ff8c00; /* Darker orange on hover */
+    color: #9932cc; /* Roxo mais claro no hover */
 }
 
 /* Header Styles */
@@ -33,13 +33,8 @@ a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.highlight {
-    color: #ff6347;
+.logo img {
+    height: 50px; /* Altura da logo */
 }
 
 .search-bar {
@@ -52,20 +47,22 @@ a:hover {
     border: none;
     border-radius: 5px 0 0 5px;
     outline: none;
+    background-color: #3a3a3a;
+    color: #f0f0f0;
 }
 
 #search-btn {
     padding: 10px 15px;
     border: none;
     border-radius: 0 5px 5px 0;
-    background-color: #3a3a3a;
+    background-color: #8a2be2; /* Roxo */
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 #search-btn:hover {
-    background-color: #505050;
+    background-color: #9932cc; /* Roxo mais claro no hover */
 }
 
 /* Hero Section Styles */
@@ -73,7 +70,7 @@ a:hover {
     position: relative;
     text-align: center;
     padding: 100px 20px;
-    background-color: #1e1e1e;
+    background-color: #1a1a1a;
     overflow: hidden;
 }
 
@@ -88,7 +85,7 @@ a:hover {
 
 .circle {
     position: absolute;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(138, 43, 226, 0.1); /* Roxo com transparência */
     border-radius: 50%;
     animation: float 10s infinite linear;
 }
@@ -128,7 +125,7 @@ a:hover {
 
 .tag {
     font-size: 18px;
-    color: #ff6347;
+    color: #8a2be2; /* Roxo */
     margin-bottom: 20px;
 }
 
@@ -139,7 +136,7 @@ a:hover {
 
 .animated-text {
     display: inline-block;
-    border-right: 2px solid #ff6347;
+    border-right: 2px solid #8a2be2; /* Roxo */
     white-space: nowrap;
     overflow: hidden;
 }
@@ -185,7 +182,7 @@ a:hover {
 
 .floating-icons i {
     font-size: 36px;
-    color: #ff6347;
+    color: #8a2be2; /* Roxo */
     animation: float-icons 3s infinite ease-in-out;
 }
 
@@ -212,7 +209,7 @@ a:hover {
 .title-bar {
     width: 100px;
     height: 5px;
-    background-color: #ff6347;
+    background-color: #8a2be2; /* Roxo */
     margin: 20px auto;
 }
 
@@ -229,6 +226,11 @@ a:hover {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .game-card:hover {
@@ -244,35 +246,46 @@ a:hover {
 .game-card h3 {
     font-size: 24px;
     padding: 10px;
+    color: #8a2be2; /* Roxo */
 }
 
 .game-card p {
     font-size: 16px;
     padding: 0 10px 10px;
+    flex-grow: 1;
 }
 
+.game-card .btn {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+
+/* Botões Modernos */
 .btn {
     display: inline-block;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #505050;
+    border-radius: 25px; /* Bordas arredondadas */
+    background-color: #8a2be2; /* Roxo */
     color: #fff;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
-    background-color: #ff6347;
+    background-color: #9932cc; /* Roxo mais claro */
+    transform: scale(1.05); /* Efeito de zoom */
 }
 
 .btn.primary {
-    background-color: #ff6347;
+    background-color: #8a2be2; /* Roxo */
 }
 
 .btn.primary:hover {
-    background-color: #ff8c00;
+    background-color: #9932cc; /* Roxo mais claro */
 }
 
 /* Footer Styles */
@@ -290,13 +303,13 @@ footer {
 
 .social-icon {
     font-size: 24px;
-    color: #ff6347;
+    color: #8a2be2; /* Roxo */
     margin: 0 10px;
     transition: color 0.3s;
 }
 
 .social-icon:hover {
-    color: #ff8c00;
+    color: #9932cc; /* Roxo mais claro */
 }
 
 /* Responsive Styles */
