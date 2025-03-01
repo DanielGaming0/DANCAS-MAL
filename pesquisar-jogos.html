@@ -5,25 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa de Jogos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="jogos.css"> <!-- CSS específico para esta página -->
 </head>
 <body>
-
-    <header class="header">
-        <span class="logo">Nyx <span class="highlight">Ferion</span></span>
+    <div class="container">
+        <!-- Barra de pesquisa -->
         <div class="search-bar">
             <input type="text" id="searchBar" placeholder="Pesquisar jogo...">
             <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
-    </header>
-
-    <section class="games">
-        <div class="section-title">
-            <h2>Jogos Disponíveis</h2>
-            <div class="title-bar"></div>
-        </div>
-
-        <div class="games-container" id="gamesList">
+        
+        <!-- Lista de jogos -->
+        <div class="games-grid" id="gamesList">
             <div class="game-card" style="background-image: url('assets/game1.jpg');">
                 <i class="fas fa-gamepad"></i>
                 <span>The Legend of Zelda: Breath of the Wild</span>
@@ -65,16 +58,7 @@
                 <span>Assassin's Creed Valhalla</span>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 NyxFerion. Todos os direitos reservados.</p>
-        <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
+    </div>
 
     <script>
         // Função de filtragem de jogos
@@ -98,6 +82,5 @@
         // Adicionar evento de input à barra de pesquisa
         document.getElementById('searchBar').addEventListener('input', filterGames);
     </script>
-
 </body>
 </html>
