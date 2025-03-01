@@ -31,12 +31,14 @@ body {
     color: var(--text);
     background: var(--background);
     overflow-x: hidden;
+    padding-top: 60px; /* Ajuste conforme a altura da barra */
 }
 
 /* Header */
 .header {
-    position: sticky; /* Alterado de fixed para sticky */
+    position: fixed; /* Fixa a barra no topo */
     top: 0;
+    left: 0;
     width: 100%;
     background: rgba(42, 42, 42, 0.9); /* Fundo semi-transparente */
     backdrop-filter: blur(10px);
