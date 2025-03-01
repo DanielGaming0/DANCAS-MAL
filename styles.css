@@ -35,7 +35,7 @@ body {
 
 /* Header */
 .header {
-    position: fixed;
+    position: fixed; /* Fixa a barra de navegação no topo */
     top: 0;
     width: 100%;
     background: rgba(42, 42, 42, 0.9); /* Fundo semi-transparente */
@@ -98,7 +98,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 8% 10%;
-    padding-top: 100px; /* Adicionado para evitar sobreposição */
     gap: 4rem;
     overflow: hidden;
 }
@@ -440,7 +439,7 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 150px; /* Ajuste para telas menores */
+        padding-top: 150px;
     }
 
     .hero-text {
