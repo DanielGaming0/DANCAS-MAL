@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyx Ferion Store - Loja de Aplicativos</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="highlight">N</span>yx Ferion Store
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar jogos..." id="search-input">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+        </div>
+        
+        <div class="hero-text">
+            <div class="tag" data-aos="fade-down">
+                <i class="fas fa-gamepad"></i> Bem-vindo à Nyx Ferion Store!
+            </div>
+            <h1 data-aos="fade-up" data-aos-delay="200">
+                Você quer jogos pagos de graça?
+                <div class="animated-text">
+                    <span class="typed-text"></span>
+                </div>
+            </h1>
+            <div class="description" data-aos="fade-up" data-aos-delay="400">
+                <p>Vem para a Nyx Ferion Store, aqui você encontra seus jogos pagos de graça e baixa em 1 clique!</p>
+            </div>
+        </div>
+
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-image-container">
+                <img src="assets/games-hero.jpg" alt="Jogos" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); object-fit: cover;">
+                <div class="image-overlay"></div>
+            </div>
+            <div class="floating-icons">
+                <i class="fas fa-gamepad" title="Jogos"></i>
+                <i class="fas fa-download" title="Downloads Rápidos"></i>
+                <i class="fas fa-gift" title="Gratuitos"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="games">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Jogos Populares</h2>
+            <div class="title-bar"></div>
+        </div>
+        <div class="games-container" data-aos="fade-up" data-aos-delay="200">
+            <!-- Exemplo de jogos -->
+            <div class="game-card">
+                <img src="assets/game1.jpg" alt="Game 1">
+                <h3>Jogo 1</h3>
+                <p>Descrição do jogo 1.</p>
+                <a href="#" class="btn primary">Baixar</a>
+            </div>
+            <div class="game-card">
+                <img src="assets/game2.jpg" alt="Game 2">
+                <h3>Jogo 2</h3>
+                <p>Descrição do jogo 2.</p>
+                <a href="#" class="btn primary">Baixar</a>
+            </div>
+            <div class="game-card">
+                <img src="assets/game3.jpg" alt="Game 3">
+                <h3>Jogo 3</h3>
+                <p>Descrição do jogo 3.</p>
+                <a href="#" class="btn primary">Baixar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nyx Ferion Store. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://discord.gg/2eBZke2SJY" class="social-icon"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/nyx_ferion?igsh=bWR1YnB6YjFnMDNz" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@NyxFerion" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Typed.js initialization
+        var typed = new Typed('.typed-text', {
+            strings: ['Grátis', 'Pagos', 'Downloads Rápidos'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+
+        // Search functionality
+        const searchBtn = document.getElementById('search-btn');
+        const searchInput = document.getElementById('search-input');
+
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value;
+            alert(`Você pesquisou por: ${query}`);
+            // Aqui você pode adicionar a lógica de pesquisa
+        });
+    </script>
+</body>
+</html>
