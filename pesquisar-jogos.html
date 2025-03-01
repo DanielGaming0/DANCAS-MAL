@@ -3,149 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyx Ferion Store - Loja de Aplicativos</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Pesquisa de Jogos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">
-            <span class="highlight">N</span>yx Ferion Store
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Pesquisar jogos..." id="search-input">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-background">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-        </div>
+    <div class="container">
+        <!-- Barra de pesquisa -->
+        <input type="text" id="searchBar" placeholder="Pesquisar jogo..." oninput="filterGames()">
         
-        <div class="hero-text">
-            <div class="tag" data-aos="fade-down">
-                <i class="fas fa-gamepad"></i> Bem-vindo à Nyx Ferion Store!
-            </div>
-            <h1 data-aos="fade-up" data-aos-delay="200">
-                Você quer jogos pagos de graça?
-                <div class="animated-text">
-                    <span class="typed-text"></span>
-                </div>
-            </h1>
-            <div class="description" data-aos="fade-up" data-aos-delay="400">
-                <p>Vem para a Nyx Ferion Store, aqui você encontra seus jogos pagos de graça e baixa em 1 clique!</p>
-            </div>
+        <!-- Lista de jogos -->
+        <div class="games-grid" id="gamesList">
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>The Legend of Zelda: Breath of the Wild</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Super Mario Odyssey</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Red Dead Redemption 2</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Cyberpunk 2077</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>The Witcher 3: Wild Hunt</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Dark Souls III</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Horizon Zero Dawn</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>God of War</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Final Fantasy VII Remake</span>
+            </a>
+            <a href="jogoaqui" class="game-card">
+                <i class="fas fa-gamepad"></i>
+                <span>Assassin's Creed Valhalla</span>
+            </a>
         </div>
+    </div>
 
-        <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
-            <div class="hero-image-container">
-                <img src="assets/games-hero.jpg" alt="Jogos">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="floating-icons">
-                <i class="fas fa-gamepad" title="Jogos"></i>
-                <i class="fas fa-download" title="Downloads Rápidos"></i>
-                <i class="fas fa-gift" title="Gratuitos"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games Section -->
-    <section class="games">
-        <div class="section-title" data-aos="fade-up">
-            <h2>Jogos Populares</h2>
-            <div class="title-bar"></div>
-        </div>
-        <div class="games-container" data-aos="fade-up" data-aos-delay="200">
-            <!-- Exemplo de jogos -->
-            <div class="game-card">
-                <img src="assets/game1.jpg" alt="Minecraft">
-                <h3>Minecraft</h3>
-                <p>Minecraft é um jogo de mundo aberto onde os jogadores exploram, constroem e sobrevivem em um ambiente feito de blocos. Com modos como Criativo e Sobrevivência, permite criar estruturas, enfrentar inimigos e jogar sozinho ou em servidores multiplayer. Sua liberdade e possibilidade de personalização tornam o jogo um dos mais populares do mundo.</p>
-                <a href="minecraft" class="btn primary">Baixar</a>
-            </div>
-            <div class="game-card">
-                <img src="assets/game2.jpg" alt="GTA">
-                <h3>Grand Theft Auto - San Andreas</h3>
-                <p>Grand Theft Auto: San Andreas (GTA SA) é um jogo de ação em mundo aberto lançado em 2004 pela Rockstar Games. Nele, os jogadores controlam Carl "CJ" Johnson, um ex-gângster que retorna a Los Santos para investigar o assassinato de sua mãe e reconquistar sua posição na cidade. O jogo se passa em San Andreas, um estado fictício inspirado na Califórnia e Nevada, com três grandes cidades: Los Santos, San Fierro e Las Venturas.</p>
-                <a href="gtasa" class="btn primary">Baixar</a>
-            </div>
-            <div class="game-card">
-                <img src="assets/game3.jpg" alt="RFS">
-                <h3>RFS - Real Flight Simulation</h3>
-                <p>RFS – Real Flight Simulator é um jogo de simulação de voo realista para dispositivos móveis e PC. Nele, os jogadores podem pilotar diversas aeronaves, planejar rotas, controlar parâmetros avançados de voo e até gerenciar tráfego aéreo em tempo real. Com gráficos detalhados, clima dinâmico e um sistema multiplayer interativo, o jogo proporciona uma experiência imersiva para entusiastas da aviação.</p>
-                <a href="RFS" class="btn primary">Baixar</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Nyx Ferion Store. Todos os direitos reservados.</p>
-        <div class="social-icons">
-            <a href="https://discord.gg/2eBZke2SJY" class="social-icon"><i class="fab fa-discord"></i></a>
-            <a href="https://www.instagram.com/nyx_ferion?igsh=bWR1YnB6YjFnMDNz" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@NyxFerion" class="social-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inicializa AOS (Animate On Scroll)
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-
-        // Inicializa Typed.js
-        var typed = new Typed('.typed-text', {
-            strings: ['Grátis', 'Pagos', 'Downloads Rápidos'],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true
-        });
-
-        // Função de pesquisa "silenciosa"
-        const searchBtn = document.getElementById('search-btn');
-        const searchInput = document.getElementById('search-input');
-
-        searchBtn.addEventListener('click', handleSearch);
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                handleSearch();
-            }
-        });
-
-        function handleSearch() {
-            const query = searchInput.value.toLowerCase(); // Obtém o valor da pesquisa
-            const gameCards = document.querySelectorAll('.game-card'); // Seleciona todos os cards de jogos
-
-            // Array para armazenar os resultados da pesquisa
-            const results = [];
-
-            gameCards.forEach(card => {
-                const gameTitle = card.querySelector('h3').textContent.toLowerCase(); // Obtém o título do jogo
-                if (gameTitle.includes(query)) {
-                    results.push(card); // Adiciona o card aos resultados se o título corresponder
-                }
-            });
-
-            // Exibe os resultados no console (ou pode enviar para um backend)
-            console.log("Resultados da pesquisa:", results);
-
-            // Limpa o campo de pesquisa
-            searchInput.value = "";
-
-            // Exibe uma mensagem para o usuário (opcional)
-            alert(`Pesquisa concluída! ${results.length} jogos encontrados. Verifique o console para detalhes.`);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
