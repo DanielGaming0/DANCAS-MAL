@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyx Ferion Store - Detalhes do Jogo</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="highlight">N</span>yx Ferion Store
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar jogos..." id="search-input">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Detalhes do Jogo -->
+    <section class="game-details">
+        <div class="game-container" data-aos="fade-up">
+            <div class="game-image">
+                <img src="assets/game1.jpg" alt="Nome do Jogo">
+            </div>
+            <div class="game-info">
+                <h1>Nome do Jogo</h1>
+                <div class="game-meta">
+                    <p><strong>Versão:</strong> 1.2.3</p>
+                    <p><strong>Atualizado em:</strong> 25/02/2025</p>
+                    <p><strong>Tamanho:</strong> 1.5 GB</p>
+                    <p><strong>Desenvolvedor:</strong> Empresa XYZ</p>
+                    <p><strong>Categoria:</strong> Ação, Aventura</p>
+                </div>
+                <div class="game-description">
+                    <p>
+                        Descrição completa do jogo. Aqui você pode adicionar detalhes sobre a história,
+                        mecânicas de jogo, requisitos do sistema e qualquer outra informação relevante.
+                        Este jogo é incrível e oferece horas de diversão!
+                    </p>
+                </div>
+                <a href="#" class="btn primary">Baixar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nyx Ferion Store. Todos os direitos reservados.</p>
+        <div class="social-icons">
+            <a href="https://discord.gg/2eBZke2SJY" class="social-icon"><i class="fab fa-discord"></i></a>
+            <a href="https://www.instagram.com/nyx_ferion?igsh=bWR1YnB6YjFnMDNz" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@NyxFerion" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Search functionality
+        const searchBtn = document.getElementById('search-btn');
+        const searchInput = document.getElementById('search-input');
+
+        searchBtn.addEventListener('click', () => {
+            const query = searchInput.value;
+            alert(`Você pesquisou por: ${query}`);
+            // Aqui você pode adicionar a lógica de pesquisa
+        });
+    </script>
+</body>
+</html>
